@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.wpattern.frameworks</groupId>
+	<artifactId>wpattern-frameworks-all</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>wpattern-frameworks-spring-data</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>3.1.3.RELEASE</spring.version>
+		<spring.data.version>1.0.2.RELEASE</spring.data.version>
+		<hibernate.version>3.6.0.Final</hibernate.version>
+		<slf4j.version>1.6.4</slf4j.version>
+		<jsf.version>2.1.7</jsf.version>
+		<jstl.version>1.2</jstl.version>
+		<primefaces.themes.version>1.0.8</primefaces.themes.version>
+	</properties>
+
+	<repositories>
+		<!-- NAKED OBJECTS -->
+		<repository>
+			<id>no-snapshotsd</id>
+			<url>http://nakedobjects.sourceforge.net/m2-repo/snapshot/</url>
+		</repository>
+
+		<!-- MAVEN REPOSITORY -->
+		<repository>
+			<id>mvn-repository</id>
+			<url>http://mvnrepository.com/</url>
+		</repository>
+
+		<!-- MAVEN SEARCH REPOSITORY -->
+		<repository>
+			<id>mavensearch</id>
+			<url>http://www.mvnsearch.org/maven2</url>
+		</repository>
+
+		<!-- SPRING REPOSITORY -->
+		<repository>
+			<id>com.springsource.repository.bundles.release</id>
+			<name>EBR Spring Release Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/release </url>
+		</repository>
+
+		<!-- SPRING REPOSITORY -->
+		<repository>
+			<id>com.springsource.repository.bundles.external</id>
+			<name>EBR External Release Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/external </url>
+		</repository>
+
+		<!-- JBOSS REPOSITORY -->
+		<repository>
+			<id>jboss-repository</id>
+			<url>https://repository.jboss.org/nexus/content/repositories/</url>
+		</repository>
+
+		<!-- JBOSS REPOSITORY -->
+		<repository>
+			<id>JBoss Repo</id>
+			<url>http://repository.jboss.com</url>
+		</repository>
+
+		<!-- GOOGLE REPOSITORY -->
+		<repository>
+			<id>google-repository</id>
+			<url>http://google-maven-repository.googlecode.com/svn/repository/</url>
+		</repository>
+
+		<!-- GLASSFISH REPOSITORY -->
+		<repository>
+			<id>glassfish-repository</id>
+			<url>http://download.java.net/maven/glassfish/</url>
+		</repository>
+
+		<!-- REPO2 REPOSITORY -->
+		<repository>
+			<id>repo2</id>
+			<url>http://repo2.maven.org/maven2</url>
+		</repository>
+
+		<!-- SPRING MAVEN MILESTONE -->
+		<repository>
+			<id>org.springframework.maven.milestone</id>
+			<name>Spring Maven Milestone Repository</name>
+			<url>http://maven.springframework.org/milestone</url>
+		</repository>
+
+		<!-- APACHE NEXUS -->
+		<repository>
+			<id>apache.nexus</id>
+			<name>ASF Nexus Staging</name>
+			<url>https://repository.apache.org/content/groups/staging/</url>
+		</repository>
+
+		<!-- APACHE -->
+		<repository>
+			<id>Apache</id>
+			<name>Apache</name>
+			<url>http://ftp.cica.es/mirrors/maven2</url>
+		</repository>
+
+		<!-- JHLABS -->
+		<repository>
+			<id>Jhlabs</id>
+			<name>Jhlabs</name>
+			<url>http://maven.jahia.org/maven2</url>
+		</repository>
+
+		<!-- JBOSS -->
+		<repository>
+			<id>JBoss</id>
+			<name>JBoss</name>
+			<url>http://repository.jboss.org/</url>
+		</repository>
+
+		<!-- MAVEN UK -->
+		<repository>
+			<id>MavenUk</id>
+			<name>MavenUk</name>
+			<url>http://uk.maven.org/maven2</url>
+		</repository>
+
+		<!-- JAVA DOT NET -->
+		<repository>
+			<id>JavaDotNet</id>
+			<name>JavaDotNet</name>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+		
+		<!-- PRIMEFACES -->
+        <repository>
+            <id>prime-repo</id>
+            <name>PrimeFaces Maven Repository</name>
+            <url>http://repository.primefaces.org</url>
+        </repository>        
+                
+        <!-- FACELETS TAGLIB -->
+        <repository>
+            <id>org.springframework.security.taglibs.facelets</id>
+            <name>Facelets TagLib</name>
+            <url>http://spring-security-facelets-taglib.googlecode.com/svn/repo/</url>
+        </repository>
+	</repositories>
+
+	<dependencies>
+		<!-- JUNIT -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- JAVAX INJECT -->
+			<dependency>
+				<groupId>javax.inject</groupId>
+				<artifactId>javax.inject</artifactId>
+				<version>1</version>
+			</dependency>
+
+			<!-- SPRING TEST -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- SPRING CORE -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- SPRING CONTEXT -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- COMMONS LANG3 -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.1</version>
+			</dependency>
+
+			<!-- SPRING DATA JPA -->
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-jpa</artifactId>
+				<version>${spring.data.version}</version>
+			</dependency>
+
+			<!-- SLF4J -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+
+			<!-- MySQL DRIVER -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.18</version>
+			</dependency>
+
+			<!-- HIBERNATE ENTITYMANAGER -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+
+			<!-- RESTEASY SPRING -->
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-spring</artifactId>
+				<version>2.3.4.Final</version>
+			</dependency>
+
+			<!-- SPRING WEB -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- SPRING BEANS -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- JAXWS -->
+			<dependency>
+				<groupId>org.jvnet.jax-ws-commons.spring</groupId>
+				<artifactId>jaxws-spring</artifactId>
+				<version>1.8</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-core</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-context</artifactId>
+					</exclusion>
+					<!-- Added this separately -->
+					<exclusion>
+						<groupId>com.sun.xml.bind</groupId>
+						<artifactId>jaxb-impl</artifactId>
+					</exclusion>
+					<!-- <exclusion> <groupId>com.sun.xml.ws</groupId> <artifactId>jaxws-rt</artifactId> 
+						</exclusion> -->
+					<exclusion>
+						<groupId>javax.activation</groupId>
+						<artifactId>activation</artifactId>
+					</exclusion>
+					<!-- required version is not available, so added another version separately -->
+					<exclusion>
+						<groupId>com.sun.xml.stream.buffer</groupId>
+						<artifactId>streambuffer</artifactId>
+					</exclusion>
+					<!-- required version is not available, so added another version separately -->
+					<exclusion>
+						<groupId>org.jvnet.staxex</groupId>
+						<artifactId>stax-ex</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<!-- JAXB IMPL -->
+			<dependency>
+				<groupId>com.sun.xml.bind</groupId>
+				<artifactId>jaxb-impl</artifactId>
+				<version>2.1.6</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.activation</groupId>
+						<artifactId>activation</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<!-- STREAMBUFFER -->
+			<dependency>
+				<groupId>com.sun.xml.stream.buffer</groupId>
+				<artifactId>streambuffer</artifactId>
+				<version>0.8</version>
+			</dependency>
+
+			<!-- STAX EX -->
+			<dependency>
+				<groupId>org.jvnet.staxex</groupId>
+				<artifactId>stax-ex</artifactId>
+				<version>1.1</version>
+			</dependency>
+
+			<!-- COMMONS DISCOVERY -->
+			<dependency>
+				<groupId>commons-discovery</groupId>
+				<artifactId>commons-discovery</artifactId>
+				<version>0.5</version>
+			</dependency>
+
+			<!-- AXIS -->
+			<dependency>
+				<groupId>org.apache.axis</groupId>
+				<artifactId>axis</artifactId>
+				<version>1.4</version>
+			</dependency>
+
+			<!-- AXIS JAXRPC -->
+			<dependency>
+				<groupId>org.apache.axis</groupId>
+				<artifactId>axis-jaxrpc</artifactId>
+				<version>1.4</version>
+			</dependency>
+
+			<!-- WSDL4J -->
+			<dependency>
+				<groupId>wsdl4j</groupId>
+				<artifactId>wsdl4j</artifactId>
+				<version>1.6.2</version>
+			</dependency>
+
+			<!-- JSF-API -->
+			<dependency>
+				<groupId>com.sun.faces</groupId>
+				<artifactId>jsf-api</artifactId>
+				<version>${jsf.version}</version>
+			</dependency>
+
+			<!-- JSF-IMPL -->
+			<dependency>
+				<groupId>com.sun.faces</groupId>
+				<artifactId>jsf-impl</artifactId>
+				<version>${jsf.version}</version>
+			</dependency>
+
+			<!-- JSTL -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>${jstl.version}</version>
+			</dependency>
+
+			<!-- SERVLET-API -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>3.0-alpha-1</version>
+			</dependency>
+
+			<!-- JSP-API -->
+			<dependency>
+				<groupId>javax.servlet.jsp</groupId>
+				<artifactId>jsp-api</artifactId>
+				<version>2.1</version>
+			</dependency>
+
+			<!-- PRIMEFACES -->
+			<dependency>
+				<groupId>org.primefaces</groupId>
+				<artifactId>primefaces</artifactId>
+				<version>3.4.2</version>
+			</dependency>
+
+			<!-- PRIMEFACES THEME (FROG) -->
+			<dependency>
+				<groupId>org.primefaces.themes</groupId>
+				<artifactId>le-frog</artifactId>
+				<version>${primefaces.themes.version}</version>
+			</dependency>
+
+			<!-- JAVAEE WEB API -->
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-web-api</artifactId>
+				<version>6.0</version>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
