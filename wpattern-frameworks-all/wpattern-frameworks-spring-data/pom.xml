@@ -27,7 +27,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 		</dependency>
-
+		
 		<!-- SPRING CONTEXT -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -56,18 +56,6 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-		</dependency>
-
-		<!-- JACKSON MAPPER ASL -->
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-		</dependency>
-
-		<!-- GSON -->
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
 		</dependency>
 	</dependencies>
 </project>

@@ -24,7 +24,7 @@ public class UserEntity extends BaseEntities<Long> {
 	@Column(name="PASSWORD", length=127, nullable=false, unique=false)
 	private String password;
 
-	@Column(name="REGISTER_DATE", nullable=true, unique=false)
+	@Column(name="REGISTER_DATE", nullable=false, unique=false)
 	@Temporal(value=TemporalType.TIMESTAMP)
 	private Date registerDate;
 
@@ -48,7 +48,7 @@ public class UserEntity extends BaseEntities<Long> {
 	}
 
 	public String getLogin() {
-		return login;
+		return this.login;
 	}
 
 	public void setLogin(String login) {
@@ -56,7 +56,7 @@ public class UserEntity extends BaseEntities<Long> {
 	}
 
 	public String getPassword() {
-		return password;
+		return this.password;
 	}
 
 	public void setPassword(String password) {
@@ -64,7 +64,7 @@ public class UserEntity extends BaseEntities<Long> {
 	}
 
 	public Date getRegisterDate() {
-		return registerDate;
+		return this.registerDate;
 	}
 
 	public void setRegisterDate(Date registerDate) {
@@ -72,7 +72,7 @@ public class UserEntity extends BaseEntities<Long> {
 	}
 
 	public Integer getAge() {
-		return age;
+		return this.age;
 	}
 
 	public void setAge(Integer age) {
